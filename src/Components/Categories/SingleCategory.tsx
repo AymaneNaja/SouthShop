@@ -9,9 +9,9 @@ type Props = {
 }
 
 const SingleCategory = (props: Props) => {
-    const { id } = useParams()
+    const { id }: any = useParams()
     const Navigate = useNavigate()
-    const { data, isLoading, isError, isSuccess } = useGetProductsByCategoryQuery(id)
+    const { data, isLoading, isError, isSuccess }: any = useGetProductsByCategoryQuery(id)
 
     return (
         <div className='flex justify-center flex-wrap gap-2 items-center m-auto w-10/12 mt-20'>

@@ -56,12 +56,12 @@ const UserSlice = createSlice({
             state.Message = ''
         },
         addToCart: (state, action) => {
-            if (!state.cart.find(item => item.id == action.payload.id)) {
+            if (!state.cart.find((item: any) => item.id == action.payload.id)) {
                 state.cart.push(action.payload)
             }
         },
         incrementQuantity: (state, action) => {
-            state.cart.map(cart => {
+            state.cart.map((cart: any) => {
                 if (cart.id == action.payload.id) {
                     return { ...cart, quantity: cart.quantity++ }
                 }
@@ -71,7 +71,7 @@ const UserSlice = createSlice({
             )
         },
         decrementQuantity: (state, action) => {
-            state.cart.map(cart => {
+            state.cart.map((cart: any) => {
                 if (cart.id == action.payload.id) {
                     return { ...cart, quantity: cart.quantity-- }
                 }
@@ -79,7 +79,7 @@ const UserSlice = createSlice({
             })
         },
         removefromCart: (state, action) => {
-            state.cart = state.cart.filter(item => {
+            state.cart = state.cart.filter((item: any) => {
                 if (item.id === action.payload.id) {
                     return;
                 }

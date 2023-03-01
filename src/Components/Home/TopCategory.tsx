@@ -14,7 +14,7 @@ type Props = {
 
 
 const TopCategory = ({ categoryTitle, categoryNum }: Props) => {
-    const { data, isLoading, isSuccess, isError } = useGetProductsByCategoryQuery(categoryNum)
+    const { data, isLoading, isSuccess, isError }: any = useGetProductsByCategoryQuery(categoryNum)
 
     const pic: React.CSSProperties | undefined = {
         width: 'fit-content', textAlign: 'center',

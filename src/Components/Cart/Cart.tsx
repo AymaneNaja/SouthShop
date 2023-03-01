@@ -21,7 +21,7 @@ const Cart = (props: Props) => {
                 <p className='flex gap-1 items-center font-bold text-slate-600'><BsFillCartFill />Cart</p>
                 <div className='flex gap-3  items-center font-bold text-slate-600'>
                     <p>Total:</p>
-                    <p className='text-green-500 transition-all'>${cart.length >= 1 ? cart.reduce((r: number, { price, quantity }: number) => r + price * quantity, 0) : '0'}
+                    <p className='text-green-500 transition-all'>${cart.length >= 1 ? cart.reduce((r: number, { price, quantity }: any) => r + price * quantity, 0) : '0'}
                     </p>
                 </div>
             </div>
