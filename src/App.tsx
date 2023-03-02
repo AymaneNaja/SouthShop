@@ -25,7 +25,7 @@ function App() {
         <Sidebar toggleSidebar={toogleSidebar} setToggleSidebar={setToggleSidebar} />
         <Navbar setToggleSidebar={setToggleSidebar} />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home />} exact />
           {!user ? <Route path='logIn' element={<LogIn />} /> : null}
           {!user ? <Route path='Signup' element={<SignUp />} /> : null}
           <Route path='/Products' element={<Products />} />

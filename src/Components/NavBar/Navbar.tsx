@@ -34,17 +34,17 @@ const Navbar = ({ setToggleSidebar }: Props) => {
                     <div className=' font-bold justify-between lg:w-2/4 md:w-10/12 w-2/4 sm:w-10/12 hidden sm:flex text-lg  mx-3'>
                         <Link to='/'>
                             <button title='home' onClick={() => setFocused('home')} className={focused == 'home' ?
-                                'flex justify-center items-center border-b-4 border-slate-700  px-4 py-2  gap-1 transition all' : 'flex justify-center items-center px-4 py-2  border-b border-white gap-1'}>{focused == 'home' ? <HomeIcon size={18} /> : <HomeoutIcon size={18} />}Home</button>
+                                'flex justify-center items-center   px-4 py-2 transition-all text-slate-500' : 'flex justify-center items-center px-4 py-2  border-b border-white gap-1'}>{focused == 'home' ? <HomeIcon size={18} /> : <HomeoutIcon size={18} />}Home</button>
                         </Link>
                         <Link to='/products'>
                             <button title='product' onClick={() => setFocused('products')} className={focused == 'products' ?
-                                'flex justify-center items-center border-b-4 border-slate-700 px-4 py-2 transition-all' : 'flex justify-center items-center px-4 py-2  border-b border-white'}>
+                                'flex justify-center items-center   px-4 py-2 transition-all text-slate-500' : 'flex justify-center items-center px-4 py-2  border-b border-white'}>
                                 {focused == 'products' ? <MdProductionQuantityLimits size={18} /> : <MdOutlineProductionQuantityLimits size={18} />}
                                 Products</button>
                         </Link>
                         <Link to='/categories'>
                             <button title='categories' onClick={() => setFocused('categories')} className={focused == 'categories' ?
-                                'flex justify-center items-center border-b-4 border-slate-700 px-4 py-2 transition-all' : 'flex justify-center items-center px-4 py-2  border-b border-white '}>
+                                'flex justify-center items-center   px-4 py-2 transition-all text-slate-500' : 'flex justify-center items-center px-4 py-2  border-b border-white '}>
                                 {focused == 'categories' ? <BiCategory size={18} /> : <BiCategory size={18} />}
                                 Categories
                             </button>

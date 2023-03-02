@@ -10,7 +10,7 @@ const Home = () => {
   const { data, isError, isLoading, isSuccess } = useGetAllProductsQuery({ offset: 0, limit: 20 })
 
   return (
-    <div className='relative'>
+    <div className='relative min-h-screen'>
       <DashBoard data={data} isError={isError} isLoading={isLoading} isSuccess={isSuccess} />
       {isSuccess ? <div className=''>
         <TopCategory categoryNum={1} categoryTitle="clothing" />
